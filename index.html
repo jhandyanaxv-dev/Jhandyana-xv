@@ -1,1 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Los XV de Jhandyana</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+background:linear-gradient(180deg,#08142f,#102b5c,#1d4f91);
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+color:white;
+}
+#bookScreen{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+position:relative;
+}
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:40px 40px;
+opacity:.3;
+}
+.book{
+width:280px;
+height:380px;
+background:linear-gradient(145deg,#8bb5ff,#4f79c8);
+border:4px solid gold;
+border-radius:12px;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+cursor:pointer;
+box-shadow:0 0 40px rgba(255,215,0,.5);
+transition:.5s;
+z-index:2;
+}
+.book:hover{
+transform:scale(1.03);
+}
+.book h1{
+font-family:'Cinzel',serif;
+font-size:30px;
+color:white;
+}
+.book p{
+margin-top:15px;
+font-size:14px;
+}
+#mainContent{
+display:none;
+}
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35));
+}
+.hero-card{
+max-width:850px;
+}
+.hero img{
+width:100%;
+max-width:450px;
+border-radius:20px;
+border:4px solid gold;
+box-shadow:0 0 25px rgba(255,215,0,.4);
+}
+.hero h2{
+font-size:55px;
+font-family:'Cinzel',serif;
+margin-top:20px;
+}
+.hero p{
+margin-top:15px;
+line-height:1.8;
+}
+.section{
+padding:80px 20px;
+text-align:center;
+}
+.section h3{
+font-size:40px;
+font-family:'Cinzel',serif;
+margin-bottom:25px;
+color:#ffd700;
+}
+</style>
+</head>
+<body>
+<div id="bookScreen">
+<div class="stars"></div>
+<div class="book" onclick="openInvitation()">
+<div>
 <h1>Los XV de Jhandyana</h1>
+<p>✨ 14 de Agosto de 2026 ✨</p>
+<p style="margin-top:25px;">
+📖 Toca el libro para comenzar
+</p>
+</div>
+</div>
+</div>
+<div id="mainContent">
+<audio id="music" loop>
+<source src="A Dream Is a Wish Your Heart Makes (From Cinderella) [Instrumental Philharmonic Orchestra Version].mp3" type="audio/mpeg">
+</audio>
+<section class="hero">
+<div class="hero-card">
+<img src="6272993A-1F7C-497E-9E3C-47EFDA760BCA.png">
+<h2>Jhandyana</h2>
+<p style="font-size:22px;">
+Mis XV Años
+</p>
+<p>
+
+Hoy se abren las puertas de un día que guardaré para siempre en mi corazón.
+
+Con inmensa alegría, te invito a acompañarme en la celebración de mis quince años y a compartir conmigo una tarde llena de recuerdos, emociones y momentos inolvidables.
+
+Bienvenido a este capítulo tan especial de mi historia.
+
+</p>
+</div>
+</section>
+<section class="section">
+<h3>⏳ Cuenta Regresiva</h3>
+<div id="countdown" style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin-top:30px;">
+<div style="background:white;color:#1d4f91;padding:20px;border-radius:20px;min-width:100px;">
+<div id="days" style="font-size:35px;font-weight:bold;">0</div>
+Días
+</div>
+<div style="background:white;color:#1d4f91;padding:20px;border-radius:20px;min-width:100px;">
+<div id="hours" style="font-size:35px;font-weight:bold;">0</div>
+Horas
+</div>
+<div style="background:white;color:#1d4f91;padding:20px;border-radius:20px;min-width:100px;">
+<div id="minutes" style="font-size:35px;font-weight:bold;">0</div>
+Min
+</div>
+<div style="background:white;color:#1d4f91;padding:20px;border-radius:20px;min-width:100px;">
+<div id="seconds" style="font-size:35px;font-weight:bold;">0</div>
+Seg
+</div>
+</div>
+</section>
+<section class="section">
+<h3>📍 Información del Evento</h3>
+<p style="font-size:22px;margin-bottom:20px;">
+📅 14 de Agosto de 2026
+</p>
+<p style="font-size:22px;margin-bottom:20px;">
+🕓 4:00 PM
+</p>
+<p style="font-size:22px;margin-bottom:20px;">
+📍 Casa Campo Villa Laura, frente al río
+</p>
+<p style="font-size:22px;color:#ffd700;">
+👗 No llevar color azul
+</p>
+</section>
+<section class="section">
+<h3>📸 Galería</h3>
+<img src="04B47A81-52D5-4C27-8367-1155F540D9BB.png" style="width:90%;max-width:450px;border-radius:20px;margin:15px;">
+<img src="8F87624F-C2CD-491F-9D07-BEF36A85B9A4.png" style="width:90%;max-width:450px;border-radius:20px;margin:15px;">
+<img src="95CFBC1B-CC6E-41F5-970E-66146F6ACD34.png" style="width:90%;max-width:450px;border-radius:20px;margin:15px;">
+<img src="E2FC12A4-A05A-47BA-8255-C16E751779C5.png" style="width:90%;max-width:450px;border-radius:20px;margin:15px;">
+</section>
+<section class="section">
+<h3>💬 Confirmar Asistencia</h3>
+
+Confirmar por WhatsApp
+</section>
+<script>
+function openInvitation(){
+document.getElementById("bookScreen").style.display="none";
+document.getElementById("mainContent").style.display="block";
+document.getElementById("music").play();
+}
+const eventDate = new Date("August 14, 2026 16:00:00").getTime();
+setInterval(function(){
+const now = new Date().getTime();
+const distance = eventDate - now;
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor(
+(distance % (1000 * 60 * 60 * 24))
+/
+(1000 * 60 * 60)
+);
+const minutes = Math.floor(
+(distance % (1000 * 60 * 60))
+/
+(1000 * 60)
+);
+const seconds = Math.floor(
+(distance % (1000 * 60))
+/
+1000
+);
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+},1000);
+</script>
+</div>
+</body>
+</html>
